@@ -1,0 +1,214 @@
+#include <iostream> // Includes the iostream Library.
+#include <string> // Includes the string Library.
+using std::cin; // Declares that we will be using the cin statement.
+using std::cout; // Declares that we will be using the cout statement.
+using std::string; // Declares that we will be using the string statement.
+string Username; // Creates a string called Username.
+string Password; // Creates a string called Password.
+float Add_1; // Creates a float to hold the first value for the corrisponding function.
+float Add_2; // Creates a float to hold the second value for the corrisponding function.
+float Subtract_1;// Creates a float to hold the first value for the corrisponding function.
+float Subtract_2; // Creates a float to hold the second value for the corrisponding function.
+float Divide_1; // Creates a float to hold the first value for the corrisponding function.
+float Divide_2; // Creates a float to hold the second value for the corrisponding function.
+float Multiply_1; // Creates a float to hold the first value for the corrisponding function.
+float Multiply_2; // Creates a float to hold the second value for the corrisponding function.
+
+float Addition_Calc(float Add_1, float Add_2); // Declares the Function.
+float Subtraction_Calc(float Subtract_1, float Subtract_2); // Declares the Function.
+float Division_Calc(float Divide_1, float Divide_2); // Declares the Function.
+float Multiplication_Calc(float Multiply_1, float Multiply_2); // Declares the Function.
+
+void Addition_Calculation() // Creates an Addition Function.
+{
+float Add_1;
+float Add_2;
+cout << "Please Enter your first value \n \n";
+cin >> Add_1; // Reads the first number entered by the user.
+cout << "Please Enter your second value \n \n";
+cin >> Add_2; // Reads the first number entered by the user.
+cout << Add_1 + Add_2; // Adds the first value to the second one.
+cout << "\n \n";
+}
+
+void Subtraction_Calculation() // Creates a Subtraction Function
+{
+float Subtract_1;
+float Subtract_2;
+cout << "Please Enter your first value \n \n";
+cin >> Subtract_1; // Reads the first number entered by the user.
+cout << "Please Enter your second value \n \n";
+cin >> Subtract_2; // Reads the first number entered by the user.
+cout << Subtract_1 - Subtract_2; // Subtracts the one number from the other.
+cout << "\n \n";
+}
+
+void Division_Calculation() // Creates a Division Function
+{
+float Divide_1;
+float Divide_2;
+cout << "Please Enter your first value \n \n";
+cin >> Divide_1; // Reads the first number entered by the user.
+cout << "Please Enter your second value \n \n";
+cin >> Divide_2; // Reads the first number entered by the user.
+cout << Divide_1 / Divide_2; // Divides one number from the other
+cout << "\n \n";
+}
+
+void Multiplication_Calculation() // Creates a Multiplication Function
+{
+float Multiply_1;
+float Multiply_2;
+cout << "Please Enter your first value \n \n";
+cin >> Multiply_1; // Reads the first number entered by the user.
+cout << "Please Enter your second value \n \n";
+cin >> Multiply_2; // Reads the first number entered by the user.
+cout << Multiply_1 * Multiply_2; // Multiplies the two numbers together.
+cout << "\n \n";
+}
+
+
+
+void Login_Screen_Template() // Creates a Login_Screen Function.
+{
+cout << "------------------------------------- \n"; _sleep (275);
+cout << "|                                   | \n"; _sleep (275);
+cout << "|                                   | \n"; _sleep (275);
+cout << "|       Basic Calculator V0.5       | \n"; _sleep (275);
+cout << "|             Login Menu            | \n"; _sleep (275);
+cout << "|                                   | \n"; _sleep (275);
+cout << "|                                   | \n"; _sleep (275);
+cout << "------------------------------------- \n"; _sleep (275);
+cout << "\n"; _sleep (275);
+cout << "            ============= \n"; _sleep (275);
+cout << "            |           | \n"; _sleep (275);
+cout << "            ============= \n"; _sleep (275);
+cout << "            |1|2|3|4|5|6| \n"; _sleep (275);
+cout << "            ============= \n"; _sleep (275);
+cout << "            |7|8|9|0|+|-| \n"; _sleep (275);
+cout << "            ============= \n"; _sleep (275);
+cout << "            |/|*|m+|m-|=| \n"; _sleep (275);
+cout << "            ============= \n"; _sleep (275);
+cout << "\n"; _sleep (275);
+}
+
+void Login_System() { // Creates a Login_System Function.
+cout << "       Please enter a Username: \n";
+cout << "\n";
+cin >> Username; // Takes in the Username.
+
+do{ // ---------------------------------------------------------------------------------------------------------------------------
+cout << "\n"; //                                                                                                                 | Whilst the Password dosn't equal the preset one,
+cout << "Hello " << Username << ". Please confirm you are a member of this corporation by entering the default password. \n"; // |
+cout << "\n"; //                                                                                                                 | The code will repeat it'self.
+cin >> Password; //                                                                                                              |
+cout << "\n"; //                                                                                                                 |
+ //                                                                                                                              |
+if (Password == "Rubik"){ //                                                                                                     |
+	cout << "Welcome to the Basic Calculator V0.5 Program \n"; _sleep (3000);//                                              |
+	system("cls"); //                                                                                                        |
+} //                                                                                                                             |
+//                                                                                                                               |
+else { //                                                                                                                        |
+	cout << "Incorect Password!"; //                                                                                         | Once the user gets the Password correct, then the code moves on.
+	cout << "\n"; //                                                                                                         |
+} //                                                                                                                             |
+} while (Password != "Rubik"); //                                                                                                |
+cout << "\n"; //                                                                                                                 |
+} // -----------------------------------------------------------------------------------------------------------------------------
+
+void Main_Menu() // Creates the Main_Menu Function
+{
+cout << "------------------------------------- \n"; _sleep (275);
+cout << "|                                   | \n"; _sleep (275);
+cout << "|                                   | \n"; _sleep (275);
+cout << "|       Basic Calculator V0.5       | \n"; _sleep (275);
+cout << "|             Main Menu             | \n"; _sleep (275);
+cout << "|                                   | \n"; _sleep (275);
+cout << "|                                   | \n"; _sleep (275);
+cout << "------------------------------------- \n"; _sleep (275);
+cout << "\n"; _sleep (275);
+cout << "            ============= \n"; _sleep (275);
+cout << "            |           | \n"; _sleep (275);
+cout << "            ============= \n"; _sleep (275);
+cout << "            |1|2|3|4|5|6| \n"; _sleep (275);
+cout << "            ============= \n"; _sleep (275);
+cout << "            |7|8|9|0|+|-| \n"; _sleep (275);
+cout << "            ============= \n"; _sleep (275);
+cout << "            |/|*|m+|m-|=| \n"; _sleep (275);
+cout << "            ============= \n"; _sleep (275);
+cout << "\n"; _sleep (275);
+cout << "Hello " << Username << ". Welcome to the Basic Calculator Main Menu. \n \n";
+cout << "Please enter the number that correlates to the calculation you would like to    preform: \n \n";
+cout << "1. Addition Calculation. \n \n";
+cout << "2. Subtraction Calculation. \n \n";
+cout << "3. Division Calculation. \n \n";
+cout << "4. Multiplication Calculation. \n \n";
+}
+
+
+void Calculation_Selection() // Creates the Calculation Selection Function.
+{
+int selection;
+
+cin >> selection; // Takes in the users selection.
+
+switch (selection)
+{
+
+case 1:
+cout << "You have selected Addition."; _sleep (2000);
+system ("cls");
+Addition_Calculation(); // Calls the Addition Function.
+cout << "\n \n";
+_sleep(500);
+break;
+
+case 2:
+cout << "You have selected Subtraction."; _sleep (2000);
+system ("cls");
+Subtraction_Calculation(); // Calls the Subtraction Function.
+cout << "\n \n";
+_sleep(500);
+break;
+
+case 3:
+cout << "You have selected Division."; _sleep (2000);
+system ("cls");
+Division_Calculation(); // Calls the Division Function.
+cout << "\n \n";
+_sleep(500);
+break;
+
+case 4: 
+cout << "You have selected Multiplication."; _sleep (2000);
+system ("cls");
+Multiplication_Calculation(); // Calls the Multiplication Function.
+cout << "\n \n";
+_sleep(500);
+break;
+}
+}
+
+
+int main(void) // The main body of code.
+{
+	Login_Screen_Template(); // Calls the function.
+	Login_System(); // Calls the function.
+	Main_Menu(); // Calls the function.
+	Calculation_Selection(); // Calls the function.
+
+	string Answer;
+cout << "Would you like to do another calculation?";
+cout << "\n \n";
+cin >> Answer; // Takes in the users answer.
+do
+{
+	system ("cls");
+	Main_Menu(); // Calls the function. Only if the condition is met.
+	Calculation_Selection(); // Calls the function. Only if the condition is met.
+}
+while (Answer != "No");
+return 0; // Ends the program.
+
+}
